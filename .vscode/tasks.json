@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "main.cpp",
+                "Game.cpp",
+                "Board.cpp",
+                "-o",
+                "TicTacToe",
+                "-I/opt/homebrew/opt/sfml/include", // Include path for SFML headers
+                "-L/opt/homebrew/opt/sfml/lib",     // Library path for SFML
+                "-lsfml-graphics",
+                "-lsfml-window",
+                "-lsfml-system"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task by VS Code"
+        }
+    ]
+}
